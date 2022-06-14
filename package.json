@@ -1,0 +1,22 @@
+{
+  "name": "crypto_arbitrage-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksimchernev/crypto_arbitrage-helper.git"
+  },
+  "author": "papix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maksimchernev/crypto_arbitrage-helper/issues"
+  },
+  "homepage": "https://github.com/maksimchernev/crypto_arbitrage-helper#readme",
+  "devDependencies": {
+    "ccxt": "^1.87.25"
+  }
+}
