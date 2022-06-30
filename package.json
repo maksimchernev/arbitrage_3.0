@@ -18,11 +18,12 @@
   },
   "homepage": "https://github.com/maksimchernev/crypto_arbitrage-helper#readme",
   "devDependencies": {
-    "ccxt": "^1.87.25"
+    "nodemon": "^2.0.16"
   },
   "dependencies": {
+    "ccxt": "^1.89.19",
+    "dotenv": "^16.0.1",
     "fs": "0.0.1-security",
-    "node-telegram-bot-api": "^0.57.0",
-    "nodemon": "^2.0.16"
+    "node-telegram-bot-api": "^0.57.0"
   }
 }

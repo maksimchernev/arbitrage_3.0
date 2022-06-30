@@ -1,18 +1,18 @@
 'use strict';
-
+const networkMatch = require('./app.js');
 const ccxt = require ('ccxt')
-
 //console.log (ccxt.exchanges) // print all available exchanges
 const binance = new ccxt.binance()
 const okx = new ccxt.okx()
-const bitfinex = new ccxt.bitfinex()
+const bitfinex = new ccxt.bitfinex2()
 const bitrue = new ccxt.bitrue()
 const bybit = new ccxt.bybit()
 const gateio = new ccxt.gateio()
 const huobi = new ccxt.huobi()
 const kucoin = new ccxt.kucoin()
 const mexc = new ccxt.mexc()
-const exchanges = ['binance', 'mexc', 'binance', 'okx', 'huobi', 'bitrue', 'bybit', 'kucoin', 'gateio']
+const exchanges = ['bitfinex', 'binance', 'okx', 'bitrue', 'bybit', 'kucoin', 'gateio', 'mexc', 'huobi']
+//const exchanges = new ccxt.exchanges
 
 const getAllExPairs = async (exchange) => {
     try {
@@ -26,14 +26,16 @@ const getAllExPairs = async (exchange) => {
 //const exchanges = ['gateio', 'huobi']
 
 const getSpecificPairs = (AllPairs, symbolFilter) => {
-    let modifiedTicker
+    let modifiedTicker,
+        spread
     const pairsArray = []
-    const specificPairsFactory = (ticker, price, baseVolume, quoteVolume) => {
+    const specificPairsFactory = (ticker, price, baseVolume, quoteVolume, spread) => {
         return {
             ticker,
             price,
             baseVolume,
-            quoteVolume
+            quoteVolume,
+            spread
         }
     }
     let specificPair
@@ -44,8 +46,9 @@ const getSpecificPairs = (AllPairs, symbolFilter) => {
             } else {
                 modifiedTicker = ticker
             }
+            spread = (AllPairs[ticker].ask-AllPairs[ticker].bid)/AllPairs[ticker].ask * 100
             if (modifiedTicker.slice(symbolFilter.length*-1-1,modifiedTicker.length) === `/${symbolFilter}` || modifiedTicker.slice(0,symbolFilter.length+1) === `${symbolFilter}/`) {
-                specificPair = specificPairsFactory(modifiedTicker, AllPairs[ticker].last, AllPairs[ticker].baseVolume, AllPairs[ticker].quoteVolume)
+                specificPair = specificPairsFactory(modifiedTicker, AllPairs[ticker].last, AllPairs[ticker].baseVolume, AllPairs[ticker].quoteVolume, spread)
                 pairsArray.push(specificPair)
             }   
         }
@@ -53,10 +56,10 @@ const getSpecificPairs = (AllPairs, symbolFilter) => {
     return(pairsArray)
 }
 
-const mutuallyAvailablePairs = (pairs1, pairs2) => {
+const mutuallyAvailablePairs = (pairs1, pairs2, symbolFilter) => {
     const AvailablePairs = []
     let availablePair
-    const AvailablePairsFactory = (ticker, price1, price2, baseVolume1, quoteVolume1, baseVolume2, quoteVolume2) => {
+    const AvailablePairsFactory = (ticker, price1, price2, baseVolume1, quoteVolume1, baseVolume2, quoteVolume2, spread1, spread2) => {
         return {
             ticker,
             price1,
@@ -64,13 +67,35 @@ const mutuallyAvailablePairs = (pairs1, pairs2) => {
             baseVolume1,
             quoteVolume1,
             baseVolume2,
-            quoteVolume2
+            quoteVolume2,
+            spread1,
+            spread2
         }
+    }
+    const reversedTicker = (ticker) => {
+        let first = ticker.slice(0,ticker.indexOf('/'))
+        let second = ticker.slice(ticker.indexOf('/')+1,ticker.length)
+        return second+'/'+first
     }
     for (let i = 0; i<pairs1.length; i++) {
         for (let j = 0; j<pairs2.length; j++){
+            let ticker1 = pairs1[i].ticker
+            let ticker2 = pairs2[j].ticker
+            if (ticker1.slice(0,ticker1.indexOf('/')) === symbolFilter && ticker2.slice(0,ticker2.indexOf('/')) !== symbolFilter) {
+                pairs1[i].ticker = reversedTicker(pairs1[i].ticker)
+                pairs1[i].price = 1/pairs1[i].price
+                let volume = pairs1[i].quoteVolume
+                pairs1[i].quoteVolume = pairs1[i].baseVolume
+                pairs1[i].baseVolume = volume
+            } else if (ticker2.slice(0,ticker2.indexOf('/')) === symbolFilter && ticker1.slice(0,ticker1.indexOf('/')) !== symbolFilter) {
+                pairs2[j].ticker = reversedTicker(pairs2[j].ticker)
+                pairs2[j].price = 1/pairs2[j].price
+                let volume = pairs2[j].quoteVolume
+                pairs2[j].quoteVolume = pairs2[j].baseVolume
+                pairs2[j].baseVolume = volume
+            }
             if(pairs1[i].ticker === pairs2[j].ticker) {
-                availablePair = AvailablePairsFactory (pairs1[i].ticker, pairs1[i].price, pairs2[j].price, pairs1[i].baseVolume, pairs1[i].quoteVolume, pairs2[j].baseVolume, pairs2[j].quoteVolume)
+                availablePair = AvailablePairsFactory (pairs1[i].ticker, pairs1[i].price, pairs2[j].price, pairs1[i].baseVolume, pairs1[i].quoteVolume, pairs2[j].baseVolume, pairs2[j].quoteVolume, pairs1[i].spread, pairs2[j].spread)
                 AvailablePairs.push(availablePair)
             }
         }
@@ -84,7 +109,7 @@ const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter, volume
         volume2
     const pairsExOne = getSpecificPairs(exchange1.pairs, symbolFilter);
     const pairsExTwo = getSpecificPairs(exchange2.pairs, symbolFilter);
-    const availablePairs = mutuallyAvailablePairs(pairsExOne, pairsExTwo);
+    const availablePairs = mutuallyAvailablePairs(pairsExOne, pairsExTwo, symbolFilter);
     //console.log(availablePairs)
     for (let pair of availablePairs) {
         if (pair.quoteVolume1 == undefined || pair.quoteVolume2 == undefined) {
@@ -100,13 +125,16 @@ const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter, volume
             volume1 = pair.quoteVolume1
             volume2 = pair.quoteVolume2
         } 
+        if (pair.spread1 == undefined || pair.spread2 == undefined) {
+            pair.commentSpread = 'No spread available'
+        }
         if (volume1 > volumeFilter && volume2 > volumeFilter && pair.price1>0 && pair.price2>0) {
             if (pair.price1 >= pair.price2 ) {
                 pair.profit = (pair.price1/pair.price2 - 1)*100
-                pair.route = `${exchange2.exchange}->${exchange1.exchange}`
+                pair.route = [exchange2.exchange, exchange1.exchange]
             } else {
                 pair.profit = (pair.price2/pair.price1 - 1)*100
-                pair.route = `${exchange1.exchange}->${exchange2.exchange}`
+                pair.route = [exchange1.exchange, exchange2.exchange]
             }
             if (pair.profit > profitFilter ) {
                 profitablePairs.push(pair)
@@ -119,14 +147,13 @@ const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter, volume
         console.log(`None found in route ${exchange1.exchange}<->${exchange2.exchange} :(`)
     }
 }
-
 const run = async (symbolFilter, profitFilter, volumeFilter) => {
     console.log('starting run')
     let AllPairs = []
     let profitablePairs
-    const allProfitablePairs = []
+    let allProfitablePairs = []
     try {
-        await Promise.all(exchanges.map(async (exchange) => getAllExPairs(exchange).then(res => AllPairs.push(res)))) 
+        await Promise.all(exchanges.map(async (exchange) => getAllExPairs(exchange).then(res => AllPairs.push(res)).catch(e => console.log(e))))
         console.log('Got all pairs from all exchanges')
         for (let i = 0; i<AllPairs.length; i++) {
             for (let j = i+1; j<AllPairs.length; j++) {
@@ -134,20 +161,23 @@ const run = async (symbolFilter, profitFilter, volumeFilter) => {
                 let exchange2Ticker = exchanges[j]
                 console.log(`Comparing ${exchange1Ticker} and ${exchange2Ticker}`)
                 profitablePairs = comparePrices(AllPairs[i], AllPairs[j], symbolFilter, profitFilter, volumeFilter)
-                allProfitablePairs.push(profitablePairs)
+                allProfitablePairs = allProfitablePairs.concat(profitablePairs)
             }
         }
-    } catch(e) {
-        console.log(e)
+    
+        if(allProfitablePairs.length > 0) {
+            allProfitablePairs = allProfitablePairs.filter((n) => {return n != null});
+            let responseJson = JSON.stringify(allProfitablePairs, null, 2)
+            //console.log(allProfitablePairs)
+            return responseJson
+        } else {
+            return 'None found :('
+        }
+    } catch(e){
+        return(e)
     }
-    if(allProfitablePairs.join('').length > 0) {
-        let responseJson = JSON.stringify(allProfitablePairs,null, 2)
-        //console.log(allProfitablePairs)
-        return responseJson
-    } else {
-        return 'None found :('
-    }
+    
 }
 
-//run('USDT', 0, 0).then(response => console.log(response))
+//run('USDT', 4, 40000).then(response => console.log(response))
 module.exports = run;

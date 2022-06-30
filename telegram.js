@@ -1,7 +1,8 @@
 const run = require('./app.js');
 const fs = require('fs')
 const TelegramBot = require('node-telegram-bot-api');
-const token = '5499009668:AAELQB862RizYwxIeuaLTYYSarGGEgHhkQs';
+require('dotenv').config();
+const token = process.env.TG_KEY;
 const bot = new TelegramBot(token, {polling: true});
 
 bot.onText(/\/start/, (msg) => {
@@ -54,16 +55,26 @@ bot.on('callback_query', query => {
   let profitFilter = requestArray[1]*1,
         pairFilter = requestArray[0].toUpperCase(),
         volumeFilter = requestArray[2]*1
+  console.log(`Filters: ${profitFilter}, ${pairFilter}, ${volumeFilter}`)
   run(pairFilter, profitFilter, volumeFilter).then(result => {
+    
     console.log(result)
-    return fs.writeFile('../response.json', result, err => {
-      if (err) {
-          console.log('Error writing file', err)
-      } else {
-          console.log('Successfully wrote file')
-          bot.sendMessage(id, 'Successfully wrote file. Type /sendresults to get file')
-      }
-  })    
+    if (result === 'None found :(') {
+      bot.sendMessage(id, 'None found :(')
+    } else {
+      return fs.writeFile('../response.json', result, err => {
+        if (err) {
+            console.log('Error writing file', err)
+        } else {
+            console.log('Successfully wrote file')
+            bot.sendMessage(id, 'Successfully wrote file. Type /sendresults to get file')
+        }
+    })  
+    }
+  
+  }).catch(e => {
+    console.log(e)
+    bot.sendMessage(id, 'Whoops something went very wrong. Probable an exchange failed to respond on time. Try again!')
   })
   
 })
