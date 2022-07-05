@@ -45,18 +45,19 @@ const bitfinexClient = new ccxt.bitfinex2({
     secret: process.env.BITFINEX_API_SECRET,
 });
 const exchanges = ['bitfinex', 'mexc', 'binance', 'okx', 'huobi', 'bitrue', 'bybit', 'kucoin', 'gateio']
-
+const getAllFetchTransactionFees = async (exchange) => {
+    try {
+        let response = await eval(exchange+'Client').fetchTransactionFees()
+        response = response.withdraw
+        return({exchange: exchange, withdraw: response})
+        } catch (error) {
+        console.log(error)
+      }
+}
 const run = async () => {
-     const isMethodAvailable = () => {
-        if (bitfinexClient.has['fetchCurrencies'] == true){
-            console.log(true)
-        } else {
-            console.log(false)
-        }
-    }
-    isMethodAvailable()
-    let aaa = await kucoinClient.fetchTransactionFee('USDT')
-    console.log(aaa) 
-      
+    let ticker = 'wfwfw2L33L;'
+    let matches = ticker.match(/\dL/);
+    console.log(matches)
+
 }
 run()

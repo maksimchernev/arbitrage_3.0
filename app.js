@@ -1,5 +1,5 @@
 'use strict';
-const networkMatch = require('./app.js');
+const networkMatch = require('./test.js');
 const ccxt = require ('ccxt')
 //console.log (ccxt.exchanges) // print all available exchanges
 const binance = new ccxt.binance()
@@ -11,7 +11,7 @@ const gateio = new ccxt.gateio()
 const huobi = new ccxt.huobi()
 const kucoin = new ccxt.kucoin()
 const mexc = new ccxt.mexc()
-const exchanges = ['bitfinex', 'binance', 'okx', 'bitrue', 'bybit', 'kucoin', 'gateio', 'mexc', 'huobi']
+const exchanges = ['bitrue', 'kucoin', 'bitfinex', 'binance', 'okx',  'bybit', 'gateio', 'mexc', 'huobi']
 //const exchanges = new ccxt.exchanges
 
 const getAllExPairs = async (exchange) => {
@@ -40,7 +40,7 @@ const getSpecificPairs = (AllPairs, symbolFilter) => {
     }
     let specificPair
     for (let ticker in AllPairs) {
-        if (ticker.slice(ticker.indexOf('/')-2,ticker.indexOf('/')) !== '3L' && ticker.slice(ticker.indexOf('/')-2,ticker.indexOf('/')) !== '3S') {
+        if (ticker.match(/\dL/) == null && ticker.match(/\dS/) == null) {
             if (ticker.indexOf(':') !== -1) {
                 modifiedTicker = ticker.slice(0,ticker.indexOf(':'))
             } else {
@@ -103,7 +103,7 @@ const mutuallyAvailablePairs = (pairs1, pairs2, symbolFilter) => {
     return (AvailablePairs)
 }
 
-const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter, volumeFilter) => {
+const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter = 0, volumeFilter = 0, spreadFilter = 5) => {
     let profitablePairs = [],
         volume1,
         volume2
@@ -128,13 +128,25 @@ const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter, volume
         if (pair.spread1 == undefined || pair.spread2 == undefined) {
             pair.commentSpread = 'No spread available'
         }
-        if (volume1 > volumeFilter && volume2 > volumeFilter && pair.price1>0 && pair.price2>0) {
+        if (volume1 > volumeFilter && volume2 > volumeFilter && pair.price1>0 && pair.price2>0 && pair.spread1 <= spreadFilter && pair.spread2 <= spreadFilter) {
             if (pair.price1 >= pair.price2 ) {
                 pair.profit = (pair.price1/pair.price2 - 1)*100
                 pair.route = [exchange2.exchange, exchange1.exchange]
+                pair.buyPrice = pair.price2
+                pair.buyQuoteVolume = pair.quoteVolume2
+                pair.buySpread = pair.spread2
+                pair.sellPrice = pair.price1
+                pair.sellQuoteVolume = pair.quoteVolume1
+                pair.sellSpread = pair.spread1
             } else {
                 pair.profit = (pair.price2/pair.price1 - 1)*100
                 pair.route = [exchange1.exchange, exchange2.exchange]
+                pair.buyPrice = pair.price1
+                pair.buyQuoteVolume = pair.quoteVolume1
+                pair.buySpread = pair.spread1
+                pair.sellPrice = pair.price2
+                pair.sellQuoteVolume = pair.quoteVolume2
+                pair.sellSpread = pair.spread2
             }
             if (pair.profit > profitFilter ) {
                 profitablePairs.push(pair)
@@ -147,11 +159,12 @@ const comparePrices =  (exchange1, exchange2, symbolFilter, profitFilter, volume
         console.log(`None found in route ${exchange1.exchange}<->${exchange2.exchange} :(`)
     }
 }
-const run = async (symbolFilter, profitFilter, volumeFilter) => {
+const run = async (symbolFilter, profitFilter = 0, volumeFilter = 0, spreadFilter = 5) => {
     console.log('starting run')
     let AllPairs = []
     let profitablePairs
     let allProfitablePairs = []
+    let matchedPairs
     try {
         await Promise.all(exchanges.map(async (exchange) => getAllExPairs(exchange).then(res => AllPairs.push(res)).catch(e => console.log(e))))
         console.log('Got all pairs from all exchanges')
@@ -160,16 +173,23 @@ const run = async (symbolFilter, profitFilter, volumeFilter) => {
                 let exchange1Ticker = exchanges[i]
                 let exchange2Ticker = exchanges[j]
                 console.log(`Comparing ${exchange1Ticker} and ${exchange2Ticker}`)
-                profitablePairs = comparePrices(AllPairs[i], AllPairs[j], symbolFilter, profitFilter, volumeFilter)
+                profitablePairs = comparePrices(AllPairs[i], AllPairs[j], symbolFilter, profitFilter, volumeFilter, spreadFilter)
                 allProfitablePairs = allProfitablePairs.concat(profitablePairs)
             }
         }
     
         if(allProfitablePairs.length > 0) {
             allProfitablePairs = allProfitablePairs.filter((n) => {return n != null});
-            let responseJson = JSON.stringify(allProfitablePairs, null, 2)
+            console.log(`Pairs found: ${allProfitablePairs.length}`)
             //console.log(allProfitablePairs)
-            return responseJson
+            try {
+                matchedPairs = await networkMatch(allProfitablePairs)
+            } catch (e) {
+                console.log(e)
+            } 
+            console.log(`Matched Pairs found: ${matchedPairs.length}`)
+            //let responseJson = JSON.stringify(matchedPairs, null, 2)
+            return matchedPairs
         } else {
             return 'None found :('
         }
