@@ -48,6 +48,7 @@ const bitfinex = new ccxt.bitfinex2({
 });
 const exchanges = ['bitfinex', 'mexc', 'binance', 'okx', 'huobi', 'bitrue', 'bybit', 'kucoin', 'gateio']
 const methods = ['fetchTransactionFees', 'fetchCurrencies']
+
 const credentialsChecker =(arr)=> {
     for (let exchange of arr) {
         console.log(eval(exchange+'Client').checkRequiredCredentials())
@@ -70,7 +71,7 @@ const getAllFetchTransactionFees = async (exchange) => {
         response = response.withdraw
         areNetworksAvailable = true
     } else {
-            areNetworksAvailable = false
+        areNetworksAvailable = false
     }
     return({exchange: exchange, withdraw: response, areNetworksAvailable: areNetworksAvailable, method: 'FTFs'})
 }
@@ -119,7 +120,7 @@ const getNetworks = async (exchange, baseTicker, AllPairs) => {
                         if (response[network] !== undefined) {
                             networks.push([network, response[network]])
                         } else {
-                            networks.push([network, null, 'no fee'])
+                            networks.push([network, 'undefined'])
                         }
                     }
                 } else {
@@ -134,7 +135,7 @@ const getNetworks = async (exchange, baseTicker, AllPairs) => {
                         } else if (response[network].fee !== undefined) {
                             networks.push([response[network].network, response[network].fee])
                         } else {
-                            networks.push([response[network].network, null, 'no fee'])
+                            networks.push([response[network].network, 'undefined'])
                         }
                     }
                 } else {
