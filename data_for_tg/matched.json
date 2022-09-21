@@ -1,0 +1,553 @@
+[
+  {
+    "Profit": 2.666655630966175,
+    "Match": true,
+    "Min_Quantity_inPairFilter": 305.8268906302378,
+    "StepOne": {
+      "Name": "kucoin",
+      "Ticker": "DEGO/USDT",
+      "Price": 1.8123,
+      "Min_Quantity": 168.75069835581183,
+      "Quote_volume": 22807.92831673,
+      "Spread": 0.26485681178612347,
+      "Average_amount_per_trade": 21.46299523809524,
+      "Trade_frequency_per_minute": 1.4,
+      "Last_ask_or_bid": [
+        1.8123,
+        50.5383
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "4.5",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "DEGO/BUSD",
+      "Price": 1.861,
+      "Min_Quantity": 0,
+      "Quote_volume": 264782.22406,
+      "Spread": 0.37634408602151165,
+      "Average_amount_per_trade": 118.11200000000001,
+      "Trade_frequency_per_minute": 0.6666666666666666,
+      "Last_ask_or_bid": [
+        1.845,
+        622.82
+      ],
+      "Networks_Deposit": [
+        "BEP20",
+        "ERC20",
+        "BEP20",
+        "ERC20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0
+        ],
+        [
+          "BNB",
+          0.5
+        ],
+        [
+          "ERC20",
+          3.9
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "kucoin",
+      "Ticker": "BUSD/USDT",
+      "Price": 0.9998,
+      "Quote_volume": 795723.0661798612,
+      "Spread": 0.02000400080015783,
+      "Average_amount_per_trade": 115.8813610830303,
+      "Trade_frequency_per_minute": 2.2,
+      "Last_ask_or_bid": [
+        0.9996,
+        1776.5694
+      ],
+      "Networks_Deposit": [
+        "BEP20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 118773196.0893855,
+    "Match": true,
+    "Min_Quantity_inPairFilter": null,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "GAS/USDT",
+      "Price": 0.000002148,
+      "Min_Quantity": 8.419408022391072e-7,
+      "Quote_volume": "undefined",
+      "Spread": 0.7852193995381066,
+      "Average_amount_per_trade": 3477866.9266666668,
+      "Trade_frequency_per_minute": 1,
+      "Last_ask_or_bid": [
+        0.000002168,
+        4719271.28
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "NEO3",
+          1
+        ],
+        [
+          "NEO",
+          1
+        ],
+        [
+          "ERC20",
+          1614885
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitrue",
+      "Ticker": "GAS/XRP",
+      "Price": 7.764,
+      "Min_Quantity": null,
+      "Quote_volume": 1531824.315,
+      "Spread": 0.3737113402061845,
+      "Average_amount_per_trade": 51.14872340425531,
+      "Trade_frequency_per_minute": 3.1333333333333333,
+      "Last_ask_or_bid": [
+        7.724,
+        9.36
+      ],
+      "Networks_Deposit": [
+        "NEO"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "XRPL",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "XRP/USDT",
+      "Price": 0.3286,
+      "Quote_volume": "undefined",
+      "Spread": 0.03651745229908067,
+      "Average_amount_per_trade": 111.6101,
+      "Trade_frequency_per_minute": 6.666666666666667,
+      "Last_ask_or_bid": [
+        0.32848,
+        313.61
+      ],
+      "Networks_Deposit": [
+        "XRP"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 117625437.98882681,
+    "Match": true,
+    "Min_Quantity_inPairFilter": null,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "GAS/USDT",
+      "Price": 0.000002148,
+      "Min_Quantity": 8.501562392439207e-7,
+      "Quote_volume": "undefined",
+      "Spread": 0.7852193995381066,
+      "Average_amount_per_trade": 3477866.9266666668,
+      "Trade_frequency_per_minute": 1,
+      "Last_ask_or_bid": [
+        0.000002165,
+        5175491.74
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "NEO3",
+          1
+        ],
+        [
+          "NEO",
+          1
+        ],
+        [
+          "ERC20",
+          1614885
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitrue",
+      "Ticker": "GAS/ADA",
+      "Price": 5.556,
+      "Min_Quantity": null,
+      "Quote_volume": 1915544.01,
+      "Spread": 1.577454803261262,
+      "Average_amount_per_trade": 46.36225806451613,
+      "Trade_frequency_per_minute": 2.066666666666667,
+      "Last_ask_or_bid": [
+        5.551,
+        42
+      ],
+      "Networks_Deposit": [
+        "NEO"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ADA",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "ADA/USDT",
+      "Price": 0.454751,
+      "Quote_volume": "undefined",
+      "Spread": 0.02748315832057812,
+      "Average_amount_per_trade": 67.99479999999996,
+      "Trade_frequency_per_minute": 6.666666666666667,
+      "Last_ask_or_bid": [
+        0.454283,
+        40
+      ],
+      "Networks_Deposit": [
+        "ADA"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 3.558778208403668,
+    "Match": true,
+    "Min_Quantity_inPairFilter": 184.33292596063652,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "BUSD/USDT",
+      "Price": 1,
+      "Min_Quantity": 184.33292596063652,
+      "Quote_volume": "undefined",
+      "Spread": 0.009999999999998899,
+      "Average_amount_per_trade": 57.76550561797754,
+      "Trade_frequency_per_minute": 5.933333333333334,
+      "Last_ask_or_bid": [
+        1,
+        1495478.29
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          6.56
+        ],
+        [
+          "BEP20",
+          1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "BETH/BUSD",
+      "Price": 1499.11,
+      "Min_Quantity": 0.07024882849109623,
+      "Quote_volume": 346198.532165,
+      "Spread": 0.6250671393275289,
+      "Average_amount_per_trade": "undefuned",
+      "Trade_frequency_per_minute": "undefuned",
+      "Last_ask_or_bid": [
+        1489.44,
+        0.3274
+      ],
+      "Networks_Deposit": [
+        "BEP20",
+        "BNB",
+        "ERC20",
+        "BEP20",
+        "BNB",
+        "ERC20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.000058
+        ],
+        [
+          "ERC20",
+          0.0025
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "BETH/USDT",
+      "Price": 1552.46,
+      "Quote_volume": "undefined",
+      "Spread": 0.014811571056903365,
+      "Average_amount_per_trade": 0.016001,
+      "Trade_frequency_per_minute": 2,
+      "Last_ask_or_bid": [
+        1552.39,
+        0.00597
+      ],
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.312754919499116,
+    "Match": true,
+    "Min_Quantity_inPairFilter": null,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "BTR/USDT",
+      "Price": 0.0559,
+      "Min_Quantity": 9253.034041598621,
+      "Quote_volume": "undefined",
+      "Spread": 2.6362038664323397,
+      "Average_amount_per_trade": 7346.198163265307,
+      "Trade_frequency_per_minute": 3.2666666666666666,
+      "Last_ask_or_bid": [
+        0.0569,
+        164.82
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          214
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitrue",
+      "Ticker": "BTR/XRP",
+      "Price": 0.17405,
+      "Min_Quantity": null,
+      "Quote_volume": 497005.982,
+      "Spread": 2.439577896289571,
+      "Average_amount_per_trade": 480.42978723404235,
+      "Trade_frequency_per_minute": 3.1333333333333333,
+      "Last_ask_or_bid": [
+        0.17198,
+        407.8
+      ],
+      "Networks_Deposit": [
+        "ERC20",
+        "BEP20"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "XRPL",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "XRP/USDT",
+      "Price": 0.3286,
+      "Quote_volume": "undefined",
+      "Spread": 0.03651745229908067,
+      "Average_amount_per_trade": 115.04620000000001,
+      "Trade_frequency_per_minute": 6.666666666666667,
+      "Last_ask_or_bid": [
+        0.3285,
+        309.45
+      ],
+      "Networks_Deposit": [
+        "XRP"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.187616631892575,
+    "Match": true,
+    "Min_Quantity_inPairFilter": null,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "SOL/USDT",
+      "Price": 31.6835,
+      "Min_Quantity": 0.5942540301841323,
+      "Quote_volume": "undefined",
+      "Spread": 0.14217128014047364,
+      "Average_amount_per_trade": 2.15,
+      "Trade_frequency_per_minute": 6.666666666666667,
+      "Last_ask_or_bid": [
+        31.7222,
+        0.8
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "SOL",
+          0.013
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitrue",
+      "Ticker": "SNT/SOL",
+      "Price": 0.00089556,
+      "Min_Quantity": null,
+      "Quote_volume": 14386.37477,
+      "Spread": 3.871092408107177,
+      "Average_amount_per_trade": 10439.864,
+      "Trade_frequency_per_minute": 0.6666666666666666,
+      "Last_ask_or_bid": [
+        0.00093152,
+        2656.5
+      ],
+      "Networks_Deposit": [
+        "SOL"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "SNT/USDT",
+      "Price": 0.0289952,
+      "Quote_volume": "undefined",
+      "Spread": 0.40712573365297977,
+      "Average_amount_per_trade": 1151.515352112676,
+      "Trade_frequency_per_minute": 4.733333333333333,
+      "Last_ask_or_bid": [
+        0.028959,
+        260.49
+      ],
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0908855515277214,
+    "Match": true,
+    "Min_Quantity_inPairFilter": 0,
+    "StepOne": {
+      "Name": "bitrue",
+      "Ticker": "LUNC/USDT",
+      "Price": 0.00015448,
+      "Min_Quantity": null,
+      "Quote_volume": 105787.863,
+      "Spread": 3.0314394649665495,
+      "Average_amount_per_trade": 626218.5483333333,
+      "Trade_frequency_per_minute": 6,
+      "Last_ask_or_bid": [
+        0.00015999,
+        6250390.64
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "LUNC",
+          "undefined"
+        ]
+      ]
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "LUNC/BUSD",
+      "Price": 0.00015771,
+      "Min_Quantity": 0,
+      "Quote_volume": 175471678.5693706,
+      "Spread": 0.08244023083263803,
+      "Average_amount_per_trade": 2384903.5787604437,
+      "Trade_frequency_per_minute": 343.1333333333333,
+      "Last_ask_or_bid": [
+        0.0001582,
+        3435246.52
+      ],
+      "Networks_Deposit": [
+        "ERC20",
+        "LUNC",
+        "ERC20",
+        "LUNC"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0
+        ],
+        [
+          "BNB",
+          0.5
+        ],
+        [
+          "ERC20",
+          3.9
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "bitrue",
+      "Ticker": "BUSD/USDT",
+      "Price": 1,
+      "Quote_volume": 32376061.835,
+      "Spread": 0.009999999999998899,
+      "Average_amount_per_trade": 3782.5,
+      "Trade_frequency_per_minute": 0.13333333333333333,
+      "Last_ask_or_bid": [
+        0.9999,
+        6763174
+      ],
+      "Networks_Deposit": [
+        "BEP20"
+      ]
+    }
+  }
+]

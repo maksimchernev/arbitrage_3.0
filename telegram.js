@@ -1,5 +1,7 @@
 const run = require('./app.js');
 const fs = require('fs')
+process.env.NTBA_FIX_319 = 1;
+process.env.NTBA_FIX_350 = 1;
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
 const token = process.env.TG_KEY;
@@ -7,11 +9,11 @@ const bot = new TelegramBot(token, {polling: true});
 
 const mongoose = require('mongoose')
 
-const db = 'mongodb+srv://nuarr2:cHbuUsSC.2YyNDK@cluster0.y1jvm.mongodb.net/arbitrage_by_papix?retryWrites=true&w=majority'
-const writeCombinationsToDB = require('./db.js');
-const getUniqueCombinations = require('./getUniqueCombinations.js');
+const db = 'mongodb+srv://nuarr2:cHbuUsSC.2YyNDK@cluster0.y1jvm.mongodb.net/arbitrage_by_papix_3?retryWrites=true&w=majority'
+const writeRoutesToDB = require('./db.js');
+const getUniqueRoutes = require('./getUniqueRoutes.js');
 
-let interval = 120000
+let interval = 200000
 
 let nIntervId = null
 mongoose
@@ -24,11 +26,11 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Write filters like: pairFilter; profitFilter; volumeFilter; spreadFilter. Make sure that the volume is specified in the units of the pair filter ")
 });
 
-bot.onText(/\/sendresults/, (msg) => {
-  bot.sendDocument(msg.chat.id, "../matchedPairs.json")
+bot.onText(/\/sendresults/, async (msg) => {
+  bot.sendDocument(msg.chat.id, "./data_for_tg/matchedRoutes.json")
 });
-bot.onText(/\/sendallresults/, (msg) => {
-  bot.sendDocument(msg.chat.id, "../AllPairsWithNetworks.json")
+bot.onText(/\/sendallresults/, async (msg) => {
+  bot.sendDocument(msg.chat.id, "./data_for_tg/AllRoutesWithNetworks.json")
 });
   
 bot.on('message', (msg) => {
@@ -83,8 +85,12 @@ bot.on('message', (msg) => {
 });
 
 bot.on("polling_error", console.log);
+
 bot.on('callback_query', query => {
   const id = query.message.chat.id;
+  ///                       !
+  //unsubscribe logic       !
+  ///                       !
   if (query.data == 'Unsubscribe') {
     if (nIntervId) {
       clearInterval(nIntervId)
@@ -102,63 +108,84 @@ bot.on('callback_query', query => {
     volumeFilter = requestArray[2]*1,
     spreadFilter = requestArray[3]*1
     console.log(`Filters: ${pairFilter}, ${profitFilter}, ${volumeFilter}, ${spreadFilter}`)
-    if (typeof requestArray[4] === 'undefined') {
+    ///                       !
+    //get results instantly   !
+    ///                       !
       run(pairFilter, profitFilter, volumeFilter, spreadFilter).then(async result => {
 
         let quantity = result.length
         let responseJson = JSON.stringify(result, null, 2)
 
         //1st async
-        fs.writeFile('../matchedPairs.json', responseJson, err => {
-          if (err) {
-              console.log('Error writing matched pairs file (get results instantly)', err)
-          } else {
-              console.log('Successfully wrote matched pairs file (get results instantly)')
-              bot.sendMessage(id, `Found ${quantity} matched combinations and . . . Successfully wrote file! Type /sendresults to get it or type /sendallresults to get all results with networks`)
-          }
-        })
-        writeCombinationsToDB(result)
-
+        if (!requestArray[4]) {
+          fs.writeFile('./data_for_tg/matchedRoutes.json', responseJson, err => {
+            if (err) {
+                console.log('Error writing matched routes file (get results instantly)', err)
+            } else {
+                console.log('Successfully wrote matched routes file (get results instantly)')
+                bot.sendMessage(id, `Found ${quantity} matched Routes and . . . Successfully wrote file! Type /sendresults to get it or type /sendallresults to get all results with networks`)
+            }
+          })
+          writeRoutesToDB(result)
+        }
       }).catch(e => {
         console.log(e)
         bot.sendMessage(id, e)
       })
-    } else {
+    ///                       !
+    //subscribe to signals    !
+    ///                       !
+    if (requestArray[4]) {
       if (!nIntervId) {
         bot.sendMessage(id, `Launch interval is ${interval/1000/60}min`);
+        let numOfRuns = 0
         nIntervId = setInterval(()=> {
-          run(pairFilter, profitFilter, volumeFilter, spreadFilter).then(async currentCombinations => {
-            let responseJson = JSON.stringify(currentCombinations, null, 2)
-            console.log('got current combinations')
+          
+          run(pairFilter, profitFilter, volumeFilter, spreadFilter).then(async currentRoutes => {
+            if (currentRoutes.length > 0) {
+              numOfRuns = numOfRuns +1
+              if (numOfRuns == 1) {
+                writeRoutesToDB(currentRoutes)
+                    .then(
+                      console.log('successfully written currentRoutes routes to db (sub)')
+                    ).catch(
+                      console.log('error writing currentRoutes routes to db (sub)')
+                    )
+              }
+            }
+            let responseJson = JSON.stringify(currentRoutes, null, 2)
+
+
+            console.log('got current Routes')
 
             //1st async
-            fs.writeFile('../matchedPairs.json', responseJson, err => {
+            fs.writeFile('./data_for_tg/matchedRoutes.json', responseJson, err => {
               if (err) {
-                  console.log('Error writing matched pairs file (sub)', err)
+                  console.log('Error writing matched routes file (sub)', err)
               } else {
-                  console.log('Successfully wrote matched pairs file (sub)')
+                  console.log('Successfully wrote matched routes file (sub)')
               }
             })
 
             
             //3rd async
-            let uniqueCombinations
+            let uniqueRoutes
             try {
-              uniqueCombinations = await getUniqueCombinations(currentCombinations)
+              uniqueRoutes = await getUniqueRoutes(currentRoutes)
             } catch (e) {
-              console.log('Error getting unique combinations')
+              console.log('Error getting unique Routes')
             }
              //2nd async
 
-            if (uniqueCombinations.length != 0) {
-              console.log('Unique combinations found', uniqueCombinations.length);
-              writeCombinationsToDB(uniqueCombinations)
+            if (uniqueRoutes!= undefined && uniqueRoutes.length != 0) {
+              console.log('Unique Routes found', uniqueRoutes.length);
+              writeRoutesToDB(uniqueRoutes)
                 .then(
-                  console.log('successfully written unique pairs to db (sub)')
+                  console.log('successfully wrote unique routes to db (sub)')
                 ).catch(
-                  console.log('error writing unique pairs to db (sub)')
+                  console.log('error writing unique routes to db (sub)')
                 )
-              for (let obj of uniqueCombinations) {
+              for (let obj of uniqueRoutes) {
   /*                     console.log('Ticker', obj.Ticker);
                 console.log('Buy', obj.BuyExchange.Name);
                 console.log('Sell', obj.SellExchange.Name);
@@ -166,39 +193,55 @@ bot.on('callback_query', query => {
                 console.log(obj.SellExchange.Deposit_Network.toString()); */
   
                 let md = `
-                    *Ticker* ${obj.Ticker}
                     *Profit* ${obj.Profit}
                     *Match* ${obj.Match}
-                    *Min_Quantity* ${obj.Min_Quantity}
                     *Min_Quantity_inPairFilter* ${obj.Min_Quantity_inPairFilter}
-                    *|BuyExchange|* 
-                    *Name* ${obj.BuyExchange.Name}
-                    *Price* ${obj.BuyExchange.Price}
-                    *Spread* ${obj.BuyExchange.Spread}
-                    *Average_amount_in_pairFilter_per_trade* ${obj.BuyExchange.Average_amount_in_pairFilter_per_trade}
-                    *Trade_frequency_per_minute* ${obj.BuyExchange.Trade_frequency_per_minute}
-                    *Last_ask* ${obj.BuyExchange.Last_ask}
-                    *Widthdraw_Networks_With_Fees* ${obj.BuyExchange.Widthdraw_Networks_With_Fees}
-                    *Withdraw_Available* ${obj.BuyExchange.Withdraw_Available}
-                    *|SellExchange|* 
-                    *Name* ${obj.SellExchange.Name}
-                    *Price* ${obj.SellExchange.Price}
-                    *Spread* ${obj.SellExchange.Spread}
-                    *Average_amount_in_pairFilter_per_trade* ${obj.SellExchange.Average_amount_in_pairFilter_per_trade}
-                    *Trade_frequency_per_minute* ${obj.SellExchange.Trade_frequency_per_minute}
-                    *Last_bid* ${obj.SellExchange.Last_bid}
-                    *Deposit_Network* ${obj.SellExchange.Deposit_Network}
-                    *Deposit_Available* ${obj.SellExchange.Deposit_Available}
+                    *|StepOne|* 
+                    *Name* ${obj.StepOne.Name}
+                    *Ticker* ${obj.StepOne.Ticker}
+                    *Price* ${obj.StepOne.Price}
+                    *Min_Quantity* ${obj.StepOne.Min_Quantity}
+                    *Quote_volume* ${obj.StepOne.Quote_volume}
+                    *Spread* ${obj.StepOne.Spread}
+                    *Average_amount_per_trade* ${obj.StepOne.Average_amount_per_trade}
+                    *Trade_frequency_per_minute* ${obj.StepOne.Trade_frequency_per_minute}
+                    *Last_ask_or_bid* ${obj.StepOne.Last_ask_or_bid}
+                    *Networks_With_Fees_Withdraw* ${obj.StepOne.Networks_With_Fees_Withdraw}
+                    *Withdraw_Available* ${obj.StepOne.Withdraw_Available}
+                    *|StepTwo|* 
+                    *Name* ${obj.StepTwo.Name}
+                    *Ticker* ${obj.StepTwo.Ticker}
+                    *Price* ${obj.StepTwo.Price}
+                    *Min_Quantity* ${obj.StepTwo.Min_Quantity}
+                    *Quote_volume* ${obj.StepTwo.Quote_volume}
+                    *Spread* ${obj.StepTwo.Spread}
+                    *Average_amount_per_trade* ${obj.StepTwo.Average_amount_per_trade}
+                    *Trade_frequency_per_minute* ${obj.StepTwo.Trade_frequency_per_minute}
+                    *Last_ask_or_bid* ${obj.StepTwo.Last_ask_or_bid}
+                    *Networks_Deposit* ${obj.StepTwo.Networks_Deposit}
+                    *Deposit_Available* ${obj.StepTwo.Deposit_Available}
+                    *Networks_With_Fees_Withdraw* ${obj.StepTwo.Networks_With_Fees_Withdraw}
+                    *Withdraw_Available* ${obj.StepTwo.Withdraw_Available}
+                    *|StepThree|* 
+                    *Name* ${obj.StepThree.Name}
+                    *Ticker* ${obj.StepThree.Ticker}
+                    *Price* ${obj.StepThree.Price}
+                    *Quote_volume* ${obj.StepThree.Quote_volume}
+                    *Spread* ${obj.StepThree.Spread}
+                    *Average_amount_per_trade* ${obj.StepThree.Average_amount_per_trade}
+                    *Trade_frequency_per_minute* ${obj.StepThree.Trade_frequency_per_minute}
+                    *Last_ask_or_bid* ${obj.StepThree.Last_ask_or_bid}
+                    *Networks_Deposit* ${obj.StepThree.Networks_Deposit}
+                    *Deposit_Available* ${obj.StepThree.Deposit_Available}
                   `;
                 bot.sendMessage(id, md, { parse_mode: 'Markdown' });
               }
             } else {
-              console.log('no unique combinations found')
-              //bot.sendMessage(id, 'no unique combinations found');
+              console.log('no unique Routes found')
+              //bot.sendMessage(id, 'no unique Routes found');
             }
           }).catch(e => {
             console.log(e)
-            bot.sendMessage(id, e)
           })
         }, interval)
       } else {

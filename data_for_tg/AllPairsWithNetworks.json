@@ -1,0 +1,2406 @@
+[
+  {
+    "Profit": 111386884.09813721,
+    "Match": true,
+    "Min_Quantity_inPairFilter": null,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "GAS/USDT",
+      "Price": 0.000002201,
+      "Min_Quantity": 8.977717691779149e-7,
+      "Quote_volume": "undefined",
+      "Spread": 0.49728752260397735,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          1286399
+        ],
+        [
+          "NEO",
+          1
+        ],
+        [
+          "NEO3",
+          1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitrue",
+      "Ticker": "GAS/XRP",
+      "Price": 7.424,
+      "Min_Quantity": null,
+      "Quote_volume": 74016.102,
+      "Spread": 0.3905723905723894,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "NEO"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "XRPL",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "XRP/USDT",
+      "Price": 0.33023,
+      "Quote_volume": "undefined",
+      "Spread": 0.015135462388374299,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "XRP"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 110511148.52339844,
+    "Match": true,
+    "Min_Quantity_inPairFilter": null,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "GAS/USDT",
+      "Price": 0.000002201,
+      "Min_Quantity": 9.048860801480774e-7,
+      "Quote_volume": "undefined",
+      "Spread": 0.49728752260397735,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          1286399
+        ],
+        [
+          "NEO",
+          1
+        ],
+        [
+          "NEO3",
+          1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitrue",
+      "Ticker": "GAS/ADA",
+      "Price": 5.29,
+      "Min_Quantity": null,
+      "Quote_volume": 181673.776,
+      "Spread": 1.584047707789787,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "NEO"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ADA",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "ADA/USDT",
+      "Price": 0.459802,
+      "Quote_volume": "undefined",
+      "Spread": 0.01783353051707908,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ADA"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 62.80276816608994,
+    "Match": false,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "BUSD/USDT",
+      "Price": 1,
+      "Min_Quantity": 1.5922865013774112,
+      "Quote_volume": "undefined",
+      "Spread": 0.0099990000999889,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          1
+        ],
+        [
+          "ERC20",
+          6.56
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "QI/BUSD",
+      "Price": 0.01156,
+      "Quote_volume": 606831.88843,
+      "Spread": 0.17241379310344127,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "BNB",
+        "ERC20",
+        "BEP20",
+        "BNB",
+        "ERC20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          7.4
+        ],
+        [
+          "AVAXC",
+          5
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "AVAXC",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "QI/USDT",
+      "Price": 0.01882,
+      "Quote_volume": "undefined",
+      "Spread": 1.2175754367390208,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "QTUM"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 141.74980813507295,
+    "Match": false,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "BUSD/USDT",
+      "Price": 1,
+      "Min_Quantity": 0.7054683270167837,
+      "Quote_volume": "undefined",
+      "Spread": 0.0099990000999889,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          1
+        ],
+        [
+          "ERC20",
+          6.56
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "MDT/BUSD",
+      "Price": 0.02606,
+      "Quote_volume": 75328.942012,
+      "Spread": 0.34548944337811827,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "BNB",
+        "ERC20",
+        "BEP20",
+        "BNB",
+        "ERC20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          3.26
+        ],
+        [
+          "ERC20",
+          148
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "MDT/USDT",
+      "Price": 0.063,
+      "Quote_volume": "undefined",
+      "Spread": 1.0902196239532251,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "KLAY"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 4.422220937626453,
+    "Match": true,
+    "Min_Quantity_inPairFilter": 91.9085694117647,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "BUSD/USDT",
+      "Price": 1,
+      "Min_Quantity": 22.613071895424834,
+      "Quote_volume": "undefined",
+      "Spread": 0.0099990000999889,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          1
+        ],
+        [
+          "ERC20",
+          6.56
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "BETH/BUSD",
+      "Price": 1556.91,
+      "Min_Quantity": 0.05653267973856209,
+      "Quote_volume": 282580.903983,
+      "Spread": 0.524255601744541,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "BNB",
+        "ERC20",
+        "BEP20",
+        "BNB",
+        "ERC20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.000055
+        ],
+        [
+          "ERC20",
+          0.0025
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "BETH/USDT",
+      "Price": 1625.76,
+      "Quote_volume": "undefined",
+      "Spread": 0.005528900793085075,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 114.17022283382346,
+    "Match": false,
+    "StepOne": {
+      "Name": "mexc",
+      "Ticker": "BTC/USDT",
+      "Price": 20245.58,
+      "Quote_volume": "undefined",
+      "Spread": 0.00004939347284223028,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "TRC20",
+          0.0001
+        ],
+        [
+          "BEP20",
+          0.00001
+        ],
+        [
+          "BTC",
+          0.0003
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "bitfinex",
+      "Ticker": "BTC/MIM",
+      "Price": 20274,
+      "Quote_volume": "undefined",
+      "Spread": 0.24183200078965553,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BITCOIN"
+      ],
+      "Networks_With_Fees_Withdraw": [
+        [
+          "MIM",
+          "undefined"
+        ]
+      ]
+    },
+    "StepThree": {
+      "Name": "mexc",
+      "Ticker": "MIM/USDT",
+      "Price": 2.1387,
+      "Quote_volume": "undefined",
+      "Spread": 0.8002977852224029,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "MATIC"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.1874649899825904,
+    "Match": true,
+    "Min_Quantity_inPairFilter": 914.2089172434783,
+    "StepOne": {
+      "Name": "kucoin",
+      "Ticker": "USDC/USDT",
+      "Price": 0.9999,
+      "Min_Quantity": 914.3003472782061,
+      "Quote_volume": 8418446.728076706,
+      "Spread": 0.001000100010007552,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "20",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "okx",
+      "Ticker": "CELT/USDC",
+      "Price": 0.003261,
+      "Min_Quantity": 0,
+      "Quote_volume": 42087.49,
+      "Spread": 2.4302430243024276,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "USDC-ERC20",
+        "USDC-OKEXCHAIN_KIP10",
+        "USDC-ALGO",
+        "USDC-OKC",
+        "USDC-POLYGON",
+        "USDC-SOLANA",
+        "USDC-TRC20",
+        "USDC-AVALANCHE C-CHAIN",
+        "USDC-ARBITRUM",
+        "USDC-OPTIMISM"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "CELT-OKC",
+          0
+        ],
+        [
+          "CELT-ERC20",
+          0
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "kucoin",
+      "Ticker": "CELT/USDT",
+      "Price": 0.003332,
+      "Quote_volume": 39587.9812386744,
+      "Spread": 0.47761194029850607,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.187463968107939,
+    "Match": true,
+    "Min_Quantity_inPairFilter": 914.3922044714118,
+    "StepOne": {
+      "Name": "kucoin",
+      "Ticker": "USDT/USDC",
+      "Price": 1.0001,
+      "Min_Quantity": 914.3007743939723,
+      "Quote_volume": 5646888.908378351,
+      "Spread": 0.0099990000999889,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "20",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "okx",
+      "Ticker": "CELT/USDC",
+      "Price": 0.003261,
+      "Min_Quantity": 0,
+      "Quote_volume": 42087.49,
+      "Spread": 2.4302430243024276,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "USDC-ERC20",
+        "USDC-OKEXCHAIN_KIP10",
+        "USDC-ALGO",
+        "USDC-OKC",
+        "USDC-POLYGON",
+        "USDC-SOLANA",
+        "USDC-TRC20",
+        "USDC-AVALANCHE C-CHAIN",
+        "USDC-ARBITRUM",
+        "USDC-OPTIMISM"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "CELT-OKC",
+          0
+        ],
+        [
+          "CELT-ERC20",
+          0
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "kucoin",
+      "Ticker": "CELT/USDT",
+      "Price": 0.003332,
+      "Quote_volume": 39587.9812386744,
+      "Spread": 0.47761194029850607,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 47671.334332833576,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 0.007845102782248266,
+    "StepOne": {
+      "Name": "kucoin",
+      "Ticker": "STC/USDT",
+      "Price": 0.004002,
+      "Quote_volume": 33450.2747658902,
+      "Spread": 0.3734129947722029,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "1500",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "okx",
+      "Ticker": "STC/USDC",
+      "Price": 1.912,
+      "Min_Quantity": 0.007845887370985365,
+      "Quote_volume": 878525.8086,
+      "Spread": 2.4883359253499244,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "STC-BEP20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "USDC-ERC20",
+          3.7402392
+        ],
+        [
+          "USDC-OKEXCHAIN_KIP10",
+          0.012
+        ],
+        [
+          "USDC-ALGO",
+          0.1
+        ],
+        [
+          "USDC-OKC",
+          0
+        ],
+        [
+          "USDC-POLYGON",
+          0.64
+        ],
+        [
+          "USDC-SOLANA",
+          0.64
+        ],
+        [
+          "USDC-TRC20",
+          1
+        ],
+        [
+          "USDC-AVALANCHE C-CHAIN",
+          0.64
+        ],
+        [
+          "USDC-ARBITRUM",
+          0.1
+        ],
+        [
+          "USDC-OPTIMISM",
+          0.1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "kucoin",
+      "Ticker": "USDC/USDT",
+      "Price": 0.9999,
+      "Quote_volume": 8418446.728076706,
+      "Spread": 0.001000100010007552,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 47671.33481054692,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 0.007846671881091144,
+    "StepOne": {
+      "Name": "kucoin",
+      "Ticker": "STC/USDT",
+      "Price": 0.004002,
+      "Quote_volume": 33450.2747658902,
+      "Spread": 0.3734129947722029,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "1500",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "okx",
+      "Ticker": "STC/USDC",
+      "Price": 1.912,
+      "Min_Quantity": 0.007845887292361908,
+      "Quote_volume": 878525.8086,
+      "Spread": 2.4883359253499244,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "STC-BEP20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "USDC-ERC20",
+          3.7402392
+        ],
+        [
+          "USDC-OKEXCHAIN_KIP10",
+          0.012
+        ],
+        [
+          "USDC-ALGO",
+          0.1
+        ],
+        [
+          "USDC-OKC",
+          0
+        ],
+        [
+          "USDC-POLYGON",
+          0.64
+        ],
+        [
+          "USDC-SOLANA",
+          0.64
+        ],
+        [
+          "USDC-TRC20",
+          1
+        ],
+        [
+          "USDC-AVALANCHE C-CHAIN",
+          0.64
+        ],
+        [
+          "USDC-ARBITRUM",
+          0.1
+        ],
+        [
+          "USDC-OPTIMISM",
+          0.1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "kucoin",
+      "Ticker": "USDT/USDC",
+      "Price": 1.0001,
+      "Quote_volume": 5646888.908378351,
+      "Spread": 0.0099990000999889,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 4057251.6326530613,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 0,
+    "StepOne": {
+      "Name": "kucoin",
+      "Ticker": "BIFI/USDT",
+      "Price": 0.0098,
+      "Quote_volume": 47110.42885743,
+      "Spread": 0.816326530612247,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "1200",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "BIFI/BUSD",
+      "Price": 397.7,
+      "Min_Quantity": 0,
+      "Quote_volume": 112969.2279,
+      "Spread": 0.20120724346076743,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "BNB",
+        "FTM",
+        "BEP20",
+        "BNB",
+        "FTM"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0
+        ],
+        [
+          "BNB",
+          0.5
+        ],
+        [
+          "ERC20",
+          3.9
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "kucoin",
+      "Ticker": "BUSD/USDT",
+      "Price": 0.9998,
+      "Quote_volume": 897775.47875306,
+      "Spread": 0.0100010001000089,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.9253469595886594,
+    "Match": false,
+    "StepOne": {
+      "Name": "bitfinex",
+      "Ticker": "LUNC/USDT",
+      "Price": 0.00023533,
+      "Quote_volume": "undefined",
+      "Spread": 3.201690232406961,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "LUNA",
+          "undefined"
+        ]
+      ]
+    },
+    "StepTwo": {
+      "Name": "mexc",
+      "Ticker": "LUNC/USDC",
+      "Price": 0.00024219,
+      "Quote_volume": "undefined",
+      "Spread": 0.2392837988365848,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "LUNC"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          14.16
+        ],
+        [
+          "MATIC",
+          1
+        ],
+        [
+          "TRC20",
+          1
+        ],
+        [
+          "BEP20",
+          1
+        ],
+        [
+          "SOL",
+          1.5
+        ],
+        [
+          "ALGO",
+          2
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "bitfinex",
+      "Ticker": "USDC/USDT",
+      "Price": 1.0001,
+      "Quote_volume": "undefined",
+      "Spread": 0.0359964003599667,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "UDC"
+      ]
+    }
+  },
+  {
+    "Profit": 2.712858114137595,
+    "Match": false,
+    "StepOne": {
+      "Name": "bitfinex",
+      "Ticker": "LUNC/USDT",
+      "Price": 0.00023533,
+      "Quote_volume": "undefined",
+      "Spread": 3.201690232406961,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "LUNA",
+          "undefined"
+        ]
+      ]
+    },
+    "StepTwo": {
+      "Name": "kucoin",
+      "Ticker": "LUNC/USDC",
+      "Price": 0.00024169,
+      "Quote_volume": 11419562.405822122,
+      "Spread": 0.1820438560198548,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "LUNC"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "ERC20",
+          "20",
+          "defaunt network only"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "bitfinex",
+      "Ticker": "USDC/USDT",
+      "Price": 1.0001,
+      "Quote_volume": "undefined",
+      "Spread": 0.0359964003599667,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "UDC"
+      ]
+    }
+  },
+  {
+    "Profit": 3.0230918284961605,
+    "Match": false,
+    "StepOne": {
+      "Name": "bitfinex",
+      "Ticker": "LUNC/USDT",
+      "Price": 0.00023533,
+      "Quote_volume": "undefined",
+      "Spread": 3.201690232406961,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "LUNA",
+          "undefined"
+        ]
+      ]
+    },
+    "StepTwo": {
+      "Name": "okx",
+      "Ticker": "LUNC/USDC",
+      "Price": 0.00024242,
+      "Quote_volume": 19824453,
+      "Spread": 0.5856877706743755,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "LUNC-TERRA"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "USDC-ERC20",
+          3.7402392
+        ],
+        [
+          "USDC-OKEXCHAIN_KIP10",
+          0.012
+        ],
+        [
+          "USDC-ALGO",
+          0.1
+        ],
+        [
+          "USDC-OKC",
+          0
+        ],
+        [
+          "USDC-POLYGON",
+          0.64
+        ],
+        [
+          "USDC-SOLANA",
+          0.64
+        ],
+        [
+          "USDC-TRC20",
+          1
+        ],
+        [
+          "USDC-AVALANCHE C-CHAIN",
+          0.64
+        ],
+        [
+          "USDC-ARBITRUM",
+          0.1
+        ],
+        [
+          "USDC-OPTIMISM",
+          0.1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "bitfinex",
+      "Ticker": "USDC/USDT",
+      "Price": 1.0001,
+      "Quote_volume": "undefined",
+      "Spread": 0.0359964003599667,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "UDC"
+      ]
+    }
+  },
+  {
+    "Profit": 396.0642355605889,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 0.9439739235803978,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "SOC/USDT",
+      "Price": 0.001766,
+      "Quote_volume": 20236.35254052,
+      "Spread": 0.5665722379603414,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "TRC20",
+          10
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "okx",
+      "Ticker": "SOC/USDC",
+      "Price": 0.008764,
+      "Min_Quantity": 0.9443516642460962,
+      "Quote_volume": 1055474.1624,
+      "Spread": 1.34580291970803,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "SOC-ERC20"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "USDC-ERC20",
+          3.7402392
+        ],
+        [
+          "USDC-OKEXCHAIN_KIP10",
+          0.012
+        ],
+        [
+          "USDC-ALGO",
+          0.1
+        ],
+        [
+          "USDC-OKC",
+          0
+        ],
+        [
+          "USDC-POLYGON",
+          0.64
+        ],
+        [
+          "USDC-SOLANA",
+          0.64
+        ],
+        [
+          "USDC-TRC20",
+          1
+        ],
+        [
+          "USDC-AVALANCHE C-CHAIN",
+          0.64
+        ],
+        [
+          "USDC-ARBITRUM",
+          0.1
+        ],
+        [
+          "USDC-OPTIMISM",
+          0.1
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "USDC/USDT",
+      "Price": 0.9996,
+      "Quote_volume": 12047599.35397762,
+      "Spread": 0.010004001600639153,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ASA",
+        "BEP20",
+        "CCHAINERC20",
+        "CUBECRC20",
+        "HRC20",
+        "SPL",
+        "TRC20",
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.1025708585661995,
+    "Match": null,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "kucoin",
+      "Ticker": "ETH/BRL",
+      "Price": 8471.1,
+      "Quote_volume": 9965570.684911685,
+      "Spread": 0.013101658245000576,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": null,
+      "Deposit_Available": null,
+      "Networks_With_Fees_Withdraw": null,
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "ETH/USDT",
+      "Price": 1628.24,
+      "Quote_volume": 120924967.07854675,
+      "Spread": 0.0006141563027784987,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": null,
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0126091187601336,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 4.124663613326979,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "BTC/BRL",
+      "Price": 105431,
+      "Min_Quantity": 0.00020371566250906197,
+      "Quote_volume": 65341416.47953,
+      "Spread": 0.04362215626215019,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.0000041
+        ],
+        [
+          "BTC",
+          0.0002
+        ],
+        [
+          "BNB",
+          0.0000069
+        ],
+        [
+          "SEGWITBTC",
+          0.0005
+        ],
+        [
+          "ERC20",
+          0.00019
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BTC",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "SEGWITBTC",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "BTC/USDT",
+      "Price": 20247.16,
+      "Quote_volume": 123501705.26256059,
+      "Spread": 0.00004938705724274661,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "BTC",
+        "CUBECRC20",
+        "ERC20",
+        "HRC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0730494302860336,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 4.162791235908592,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "ETH/BRL",
+      "Price": 8473.55,
+      "Min_Quantity": 0.002556620176330634,
+      "Quote_volume": 30513460.121983,
+      "Spread": 0.03798634614998172,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.000053
+        ],
+        [
+          "ERC20",
+          0.00096
+        ],
+        [
+          "ARBITRUM",
+          0.0003
+        ],
+        [
+          "BNB",
+          0.000088
+        ],
+        [
+          "OPTIMISM",
+          0.0003
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ],
+        [
+          "ARBITRUM",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "OPTIMISM",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "ETH/USDT",
+      "Price": 1628.24,
+      "Quote_volume": 120924967.07854675,
+      "Spread": 0.0006141563027784987,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ARB",
+        "BEP20",
+        "CUBECRC20",
+        "ERC20ERC20",
+        "HRC20",
+        "OPT"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.208830601092915,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 6.376450956914072,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "BNB/BRL",
+      "Price": 1464,
+      "Min_Quantity": 0.02263641221525106,
+      "Quote_volume": 3970779.99,
+      "Spread": 0.0681663258350375,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.0005
+        ],
+        [
+          "BNB",
+          0.0005
+        ],
+        [
+          "ERC20",
+          0
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "BNB/USDT",
+      "Price": 281.69,
+      "Quote_volume": 744971.97660621,
+      "Spread": 0.02485265923455585,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20BNB"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0534479054779675,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 4.180968008536663,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "LINK/BRL",
+      "Price": 37.24,
+      "Min_Quantity": 0.5843829769427162,
+      "Quote_volume": 188605.4296,
+      "Spread": 0.18766756032171658,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.012
+        ],
+        [
+          "BNB",
+          0.002
+        ],
+        [
+          "ERC20",
+          0.55
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "LINK/USDT",
+      "Price": 7.1545,
+      "Quote_volume": 2982181.7215254833,
+      "Spread": 0.03631944347436364,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "HRC20",
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.090269043760129,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 4.25471545232365,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "LTC/BRL",
+      "Price": 308.5,
+      "Min_Quantity": 0.0717610971887949,
+      "Quote_volume": 1011889.2556,
+      "Spread": 0.0970559689420936,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.0015
+        ],
+        [
+          "LTC",
+          0.001
+        ],
+        [
+          "BNB",
+          0.0024
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "LTC",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "LTC/USDT",
+      "Price": 59.29,
+      "Quote_volume": 5010484.481039322,
+      "Spread": 0.0168577208361396,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "ERC20",
+        "HRC20",
+        "LTC"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.236321808288011,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 3.7008501948723627,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "ADA/BRL",
+      "Price": 2.389,
+      "Min_Quantity": 8.048931031880283,
+      "Quote_volume": 894289.2865,
+      "Spread": 0.12526096033403397,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.18
+        ],
+        [
+          "ADA",
+          0.8
+        ],
+        [
+          "BNB",
+          0.3
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ADA",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "ADA/USDT",
+      "Price": 0.459794,
+      "Quote_volume": 2429564.4978954513,
+      "Spread": 0.038275181154694686,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ADA",
+        "BEP20",
+        "HRC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0890115586690294,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 178.60561778687276,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "CHZ/BRL",
+      "Price": 1.142,
+      "Min_Quantity": 813.7819979718637,
+      "Quote_volume": 2911713.537,
+      "Spread": 0.1749781277340334,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BNB",
+          0.65
+        ],
+        [
+          "ERC20",
+          17
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "CHZ/USDT",
+      "Price": 0.219476,
+      "Quote_volume": 1213348.3084882444,
+      "Spread": 0.0869941472523954,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20",
+        "HRC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.279629893238444,
+    "Match": false,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "WIN/BRL",
+      "Price": 0.000562,
+      "Quote_volume": 336717.995811,
+      "Spread": 0.17761989342806825,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          762
+        ],
+        [
+          "BNB",
+          1272
+        ],
+        [
+          "TRX",
+          578
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "BNB",
+          "undefined"
+        ],
+        [
+          "TRX",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "WIN/USDT",
+      "Price": 0.00010821,
+      "Quote_volume": 3622593.7563691824,
+      "Spread": 0.00924043614859395,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "TRC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0487135506003673,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 4.075970502344226,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "SHIB/BRL",
+      "Price": 0.00006413,
+      "Min_Quantity": 330841.7615539144,
+      "Quote_volume": 2080051.86378322,
+      "Spread": 0.15569048731122906,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          6778
+        ],
+        [
+          "ERC20",
+          309537
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "SHIB/USDT",
+      "Price": 0.00001232,
+      "Quote_volume": 1363024.7367200786,
+      "Spread": 0.08110300081102922,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "HRC20",
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0162888086642905,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 15.830321461311247,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "SOL/BRL",
+      "Price": 166.2,
+      "Min_Quantity": 0.4959606955624871,
+      "Quote_volume": 601602.647,
+      "Spread": 0.0601322910403023,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.0026
+        ],
+        [
+          "SOL",
+          0.01
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "SOL",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "SOL/USDT",
+      "Price": 31.9185,
+      "Quote_volume": 5477630.660729947,
+      "Spread": 0.031941278152158054,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "HRC20",
+        "SOL"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.224137618832045,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 170.10593085452874,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "C98/BRL",
+      "Price": 2.209,
+      "Min_Quantity": 400.155094929496,
+      "Quote_volume": 1803125.6195,
+      "Spread": 0.6747638326585551,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.19
+        ],
+        [
+          "ERC20",
+          8.9
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "C98/USDT",
+      "Price": 0.4251,
+      "Quote_volume": 25599.668422791547,
+      "Spread": 0.11737089201877945,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.06681269841269,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 9.370999130629825,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "AVAX/BRL",
+      "Price": 100.8,
+      "Min_Quantity": 0.48383677958239707,
+      "Quote_volume": 281750.994,
+      "Spread": 0.19801980198020083,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.0043
+        ],
+        [
+          "AVAX",
+          0.01
+        ],
+        [
+          "AVAXC",
+          0.008
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "AVAX",
+          "undefined"
+        ],
+        [
+          "AVAXC",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "AVAX/USDT",
+      "Price": 19.3681,
+      "Quote_volume": 1894330.5220177223,
+      "Spread": 0.04026804059844289,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "AVAX",
+        "CCHAIN"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.107127718906865,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 3.9255332867488155,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "GMT/BRL",
+      "Price": 3.586,
+      "Min_Quantity": 5.6949561682124115,
+      "Quote_volume": 636325.3829,
+      "Spread": 0.16708437761069972,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.12
+        ],
+        [
+          "ERC20",
+          5.58
+        ],
+        [
+          "SOL",
+          0.37
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ],
+        [
+          "SOL",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "GMT/USDT",
+      "Price": 0.6893,
+      "Quote_volume": 1652882.25293414,
+      "Spread": 0.029006526468452205,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "BEP20",
+        "SOL"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.103711307137135,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 182.29877773576112,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "APE/BRL",
+      "Price": 24.94,
+      "Min_Quantity": 38.02803156906027,
+      "Quote_volume": 289341.1615,
+      "Spread": 0.24009603841536106,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.018
+        ],
+        [
+          "ERC20",
+          0.8
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "APE/USDT",
+      "Price": 4.7938,
+      "Quote_volume": 3786384.726738273,
+      "Spread": 0.029183690486122942,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  },
+  {
+    "Profit": 2.0033363774733637,
+    "Match": false,
+    "Min_Quantity_inPairFilter": 188.92483771364667,
+    "StepOne": {
+      "Name": "huobi",
+      "Ticker": "USDT/BRL",
+      "Price": 5.312,
+      "Quote_volume": 220277.22745341,
+      "Spread": 0.432900432900427,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BRL",
+          999
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepTwo": {
+      "Name": "binance",
+      "Ticker": "GAL/BRL",
+      "Price": 13.14,
+      "Min_Quantity": 74.87509421117892,
+      "Quote_volume": 2021612.5503,
+      "Spread": 0.37965072133637595,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "FIAT_MONEY",
+        "FIAT_MONEY"
+      ],
+      "Deposit_Available": true,
+      "Networks_With_Fees_Withdraw": [
+        [
+          "BEP20",
+          0.033
+        ],
+        [
+          "ERC20",
+          1.5
+        ],
+        [
+          "BEP20",
+          "undefined"
+        ],
+        [
+          "ERC20",
+          "undefined"
+        ]
+      ],
+      "Withdraw_Available": true
+    },
+    "StepThree": {
+      "Name": "huobi",
+      "Ticker": "GAL/USDT",
+      "Price": 2.5232,
+      "Quote_volume": 477610.75497353,
+      "Spread": 0.0712927756653914,
+      "Average_amount_per_trade": "undefined",
+      "Trade_frequency_per_minute": "undefined",
+      "Last_ask_or_bid": "undefined",
+      "Networks_Deposit": [
+        "ERC20"
+      ],
+      "Deposit_Available": true
+    }
+  }
+]

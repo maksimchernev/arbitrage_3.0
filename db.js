@@ -1,38 +1,53 @@
-const Combinations = require('./models/combinations')
-const db = 'mongodb+srv://nuarr2:cHbuUsSC.2YyNDK@cluster0.y1jvm.mongodb.net/?retryWrites=true&w=majority'
+const Routes = require('./models/routes')
 
-const writeCombinationsToDB = async (matchedPairs) => {
-        for (let combo of matchedPairs) {
-            let Ticker = combo.Ticker,
-                Profit = combo.Profit,
-                Match = combo.Match,
-                Min_Quantity= combo.Min_Quantity,
-                Min_Quantity_inPairFilter = combo.Min_Quantity_inPairFilter,
-                Buy_Exchange = combo.BuyExchange.Name,
-                Buy_Price = combo.BuyExchange.Price,
-                Buy_Quote_Volume = combo.BuyExchange.Quote_volume,
-                Buy_Spread = combo.BuyExchange.Spread,
-                Buy_Average_Amount_In_PairFilter_Per_Trade = combo.BuyExchange.Average_amount_in_pairFilter_per_trade,
-                Buy_Trade_Frequency_Per_Minute = combo.BuyExchange.Trade_frequency_per_minute,
-                Last_ask = combo.BuyExchange.Last_ask,
-                Withdraw_Networks_With_Fees = combo.BuyExchange.Widthdraw_Networks_With_Fees,
-                Withdraw_Available = combo.BuyExchange.Withdraw_Available,
-    
-                Sell_Exchange = combo.SellExchange.Name,
-                Sell_Price = combo.SellExchange.Price,
-                Sell_Quote_Volume = combo.SellExchange.Quote_volume,
-                Sell_Spread = combo.SellExchange.Spread,
-                Sell_Average_Amount_In_PairFilter_Per_Trade = combo.SellExchange.Average_amount_in_pairFilter_per_trade,
-                Sell_Trade_Frequency_Per_Minute = combo.SellExchange.Trade_frequency_per_minute,
-                Last_bid = combo.SellExchange.Last_bid,
-                Deposit_Networks_With_Fees = combo.SellExchange.Deposit_Network,
-                Deposit_Available = combo.SellExchange.Deposit_Available
-            const combinations = new Combinations({Ticker, Profit, Match, Min_Quantity, Min_Quantity_inPairFilter, Buy_Exchange, Buy_Price, Buy_Quote_Volume, Buy_Spread, Buy_Average_Amount_In_PairFilter_Per_Trade, Buy_Trade_Frequency_Per_Minute, Last_ask, Withdraw_Networks_With_Fees, Withdraw_Available, Sell_Exchange, Sell_Price, Sell_Quote_Volume, Sell_Spread, Sell_Average_Amount_In_PairFilter_Per_Trade, Sell_Trade_Frequency_Per_Minute, Last_bid, Deposit_Networks_With_Fees, Deposit_Available})
+const writeRoutesToDB = async (matchedRoutes) => {
+        for (let route of matchedRoutes) {
+            let Profit = route.Profit,
+                Match = route.Match,
+                Min_Quantity_inPairFilter = route.Min_Quantity_inPairFilter,
+
+                Ex1 = route.StepOne.Name,
+                Ticker1 = route.StepOne.Ticker,
+                Price1 = route.StepOne.Price,
+                Min_Quantity1 = route.StepOne.Min_Quantity,
+                Quote_volume1 = route.StepOne.Quote_volume,
+                Spread1 = route.StepOne.Spread,
+                Average_amount_per_trade1 = route.StepOne.Average_amount_per_trade,
+                Trade_frequency_per_minute1 = route.StepOne.Trade_frequency_per_minute,
+                Last_ask_or_bid1 = route.StepOne.Last_ask_or_bid,
+                Networks_With_Fees_Withdraw1 = route.StepOne.Networks_With_Fees_Withdraw,
+                Withdraw_Available1 = route.StepOne.Withdraw_Available,
+
+                Ex2 = route.StepTwo.Name,
+                Ticker2 = route.StepTwo.Ticker,
+                Price2 = route.StepTwo.Price,
+                Min_Quantity2 = route.StepTwo.Min_Quantity,
+                Quote_volume2 = route.StepTwo.Quote_volume,
+                Spread2 = route.StepTwo.Spread,
+                Average_amount_per_trade2 = route.StepTwo.Average_amount_per_trade,
+                Trade_frequency_per_minute2 = route.StepTwo.Trade_frequency_per_minute,
+                Last_ask_or_bid2 = route.StepTwo.Last_ask_or_bid,
+                Networks_Deposit2 = route.StepTwo.Networks_Deposit,
+                Deposit_Available2 = route.StepTwo.Deposit_Available,
+                Networks_With_Fees_Withdraw2 = route.StepTwo.Networks_With_Fees_Withdraw,
+                Withdraw_Available2 = route.StepTwo.Withdraw_Available,
+
+                Ex3 = route.StepThree.Name,
+                Ticker3 = route.StepThree.Ticker,
+                Price3 = route.StepThree.Price,
+                Quote_volume3 = route.StepThree.Quote_volume,
+                spread3 = route.StepThree.Spread,
+                Average_amount_per_trade3 = route.StepThree.Average_amount_per_trade,
+                Trade_frequency_per_minute3 = route.StepThree.Trade_frequency_per_minute,
+                Last_ask_or_bid3 = route.StepThree.Last_ask_or_bid,
+                Networks_Deposit3 = route.StepThree.Networks_Deposit,
+                Deposit_Available3 = route.StepThree.Deposit_Available
+            const routes = new Routes({Profit, Match, Min_Quantity_inPairFilter, Ex1, Ticker1, Price1, Min_Quantity1, Quote_volume1, Spread1, Average_amount_per_trade1, Trade_frequency_per_minute1, Last_ask_or_bid1, Networks_With_Fees_Withdraw1, Withdraw_Available1, Ex2, Ticker2, Price2, Min_Quantity2, Quote_volume2, Spread2, Average_amount_per_trade2, Trade_frequency_per_minute2, Last_ask_or_bid2, Last_ask_or_bid2, Networks_Deposit2, Deposit_Available2, Networks_With_Fees_Withdraw2,Withdraw_Available2, Ex3,Ticker3,Price3,Quote_volume3,spread3, Average_amount_per_trade3, Trade_frequency_per_minute3,Last_ask_or_bid3,  Networks_Deposit3, Deposit_Available3   })
             try {
-                await combinations.save()
+                await routes.save()
             } catch(e) {
-                console.log(`did not wrote for ${Ticker} buy ${Buy_Exchange} sell ${Sell_Exchange}`, e)
+                console.log(`did not wrote for  ${route.StepOne.Ticker} -> ${route.StepTwo.Ticker} -> ${route.StepThree.Ticker} exchanges: ${route.StepOne.Name} -> ${route.StepTwo.Name} -> ${route.StepThree.Name}`, e)
             }
         }
 }
-module.exports = writeCombinationsToDB
+module.exports = writeRoutesToDB
